@@ -31,7 +31,7 @@ function displayResult($table_name)
 	}
 }
 //function for displaying all the event information
-function displayEvent()
+/*function displayEvent()
 {
 			$query=mysql_query("SELECT e.id,e.event_title,e.event_description,e.image_url,e.video_url,e.college_id,c.institution_name,e.	sharing_facebook,e.sharing_twitter,e.sharing_whatsapp,e.event,e.create_date,c.institution_name FROM tbl_event as e 
 									 JOIN tbl_college_institution c ON c.id=e.college_id
@@ -48,9 +48,9 @@ function displayEvent()
 				return $result;
 			}
 }
+*/
 
-
-function getMainEvent()
+/*function getMainEvent()
 {
 			$query=mysql_query("SELECT * FROM tbl_event WHERE event=1");
 			$row=mysql_fetch_assoc($query);
@@ -64,7 +64,7 @@ function getMainEvent()
 				return  false;
 			}
 
-}
+}*/
 
 //function for disaplying notification details
 function notifications()
@@ -272,7 +272,7 @@ function uploadFile($target_file)
 		} 
 		else
 		{
-			if (!move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file))
+			if (!move_uploaded_file($_FILES["fileToImageUpload"]["tmp_name"], $target_file))
 			{
 				echo "Sorry, there was an error uploading your file.";
 			}
@@ -280,6 +280,42 @@ function uploadFile($target_file)
 	
 		
 }
+
+//function for upload file
+function uploadVideoFile($target_file)
+{
+
+		$uploadOk = 1;
+		 $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
+		
+		if (file_exists($target_file))
+		{
+			echo "Sorry, file already exists.";
+			$uploadOk = 0;
+		}
+		
+		if($imageFileType != "jpg" && $imageFileType != "JPG" && $imageFileType != "png" && $imageFileType != "PNG" && $imageFileType != "jpeg" && $imageFileType != "JPEG" && $imageFileType != "gif" && $imageFileType != "GIF" && $imageFileType != "mp4" && $imageFileType != "MP4" && $imageFileType != "wmv" && $imageFileType != "WMV") 
+		{
+			echo "sorry wrong file uploaded.";
+			$uploadOk = 0;
+		}
+// Check if $uploadOk is set to 0 by an error
+		if ($uploadOk == 0) 
+		{
+			echo "Sorry, your file was not uploaded.";
+// if everything is ok, try to upload file
+		} 
+		else
+		{
+			if (!move_uploaded_file($_FILES["fileToVideoUpload"]["tmp_name"], $target_file))
+			{
+				echo "Sorry, there was an error uploading your file.";
+			}
+		}
+	
+		
+}
+
 
 
 function getmaineventInstituteName()
