@@ -2,7 +2,6 @@
 ob_start();
 include('../function.php');
 include('../config.php');
-
 require('common/header.php');?>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
 <script src="http://malsup.github.com/jquery.form.js"></script> 
@@ -88,54 +87,74 @@ var base_url=site_url;
                 }
     });
     }
-    
-    </script>
-    <div id="all-output" class="col-md-10 upload">
-        	<div id="upload">
-                <div class="row">
-                    <!-- upload -->
-                    <div class="col-md-8">
-						<h1 class="page-title"><span>Upload</span> Video</h1>
-						 <form role="form" id="search-form" action="video.php" method="post" enctype="multipart/form-data">
-                        	<div class="row">
-                            	<div class="clearfix"></div>
-                            	<div class="col-md-12">
-                                	<label>Video upload</label>
-                                    <input id="upload_file" type="file" name="video" class="file">
+						 </script>
+<div id="page-wrapper">
+            <div class="row">
+                <div class="col-lg-12">
+                    <h1 class="page-header">Gallery</h1>
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                               <!-- /.col-lg-6 (nested) -->
+                                <div class="col-lg-6">
+                                   
+                                    <h5>Upload Gallery Here</h5>
+                                    <form role="form" id="search-form" action="upload.php" method="post" enctype="multipart/form-data">
+                                
+                                <div class="form-group has-success ">
+                                    <label class="control-label" for="inputSuccess">Choose Gallery</label>
+                                    <input type="file" id="upload_file" name="image[]" onchange="preview_image(event);" multiple/>
+
                                 </div>
-                                    <div class="clearfix"></div>
-                            	<div class="col-md-12">
-                                	<label>Post Featured Image</label>
-                                    <input id="featured_image" type="file" name="image" class="file">
+                                <button type="submit" class="btn btn-primary btn-lg btn-block">Upload</button>
+                            </form>
+                                   
                                 </div>
-                                   <div class="clearfix"></div>
-                            	<div class="col-md-12">
-                                    <button type="submit" id="contact_submit" class="btn btn-dm">Save your post</button>
-                                </div>
+                                <!-- /.col-lg-6 (nested) -->
                             </div>
-                        </form>
-                    </div><!-- // col-md-8 -->
-                     
-                    <div class="col-md-4">
-                    	<a href="#"><img src="images/upload-adv.png" alt=""></a>
-                    </div><!-- // col-md-8 -->
-                    <div class="col-lg-12" id="list">
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+			 <div class="row">
+                <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                               <!-- /.col-lg-6 (nested) -->
+                            <div class="col-lg-12" id="list">
 
 
 
 
                         </div>
-                    <!-- // upload -->
-                </div><!-- // row -->
-            </div><!-- // upload -->
-		</div>
-
-<?php
+                        
+                                <!-- /.col-lg-6 (nested) -->
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+                <!-- /.col-lg-12 -->
+            </div>
+            <!-- /.row -->
+        </div>
+		<?php
 require('common/footer.php');
 ?>
-<script>
-function changecss(id) {
-    document.getElementById(id).style.display = "block";
-}
-</script>
 
+
+        <!-- /#page-wrapper -->
