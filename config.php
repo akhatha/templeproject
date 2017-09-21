@@ -7,7 +7,7 @@ define('DB_SERVER', "localhost"); // db server/ host name
 $con = mysql_connect(DB_SERVER, DB_USER, DB_PASSWORD) or die(mysql_error());  
 $db = mysql_select_db(DB_DATABASE) or die(mysql_error()) or die(mysql_error()); 
 define("STATUS", "success");
-define("SITE_URL",$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/nittemobileapp");
+define("SITE_URL",$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/templeproject");
 
 
 ?>
