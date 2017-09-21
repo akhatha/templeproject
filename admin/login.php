@@ -38,7 +38,7 @@ if(isset($_POST['submit']))
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Nitte University</title>
+    <title>KP Shrinivas Tantry</title>
 	<link href="../assets/css/login.css" rel="stylesheet">
 	  <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 	  <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -50,7 +50,7 @@ if(isset($_POST['submit']))
   <div class="apollo">
 			<div class="apollo-container clearfix">
 				<div class="logo">
-					<img src="../assets/images/logo.jpg"  >
+					<img src="../assets/images/logo.png" width="70%" >
 				</div>
 
 				<div class="apollo-login">

@@ -29,6 +29,8 @@ if(isset($_POST['save_user']))
 	}
 	else
 	{
+		echo "ids".$id;
+		
 		$data=array(
 						'username '=>$username,
 						'password' =>$password,
@@ -113,7 +115,7 @@ if(isset($_POST['delete']))
 <div id="page-wrapper">
             <div class="container-fluid">
 			<div class="col-lg-8">
-                <h1 class="page-header">User Mangement</h1> 
+                <h1 class="page-header">Add User</h1> 
             </div>             
     <div  class="row" id="user_tbl_view">
         <div class="col-md-10 col-md-offset-1">
@@ -153,9 +155,9 @@ if(isset($_POST['delete']))
 								?>
 										<tr data-user-id=<?php echo $row['id']?>>
 										<?php
-											   echo ' <td class="hidden-xs">'.$i.'</td><td class="hidden-xs">'.$row['username'].'</td>
+											   echo '<form method="POST"><td class="hidden-xs">'.$i.'</td><td class="hidden-xs">'.$row['username'].'</td>
 											   <td align="center">
-												<button type="button" class="btn btn-default edit" value='.$row['id'].'><em class="fa fa-pencil"></em></button>  </td>
+												<button type="button" class="btn btn-default edit" value='.$row['id'].'><em class="fa fa-pencil"></em></button>  </td></form>
 												<td><form method="POST"><input type="hidden" name="id" value='.$row['id'].'><input type="submit" class="btn btn-danger fa fa-trash" name="delete" value="Delete"> </form> </td>
 								  
 										</tr>';

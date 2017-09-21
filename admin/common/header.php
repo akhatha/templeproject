@@ -19,8 +19,7 @@ if(!isset($_SESSION['username']))
     <meta name="description" content="">
     <meta name="author" content="">
 	
-    <title>Nitte University</title>
-
+		<title>KP Shrinivas Tantry</title>
     <!-- Bootstrap Core CSS -->
     <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
 
