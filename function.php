@@ -31,7 +31,7 @@ function displayResult($table_name)
 	}
 }
 //function for displaying all the event information
-function displayEvent()
+/*function displayEvent()
 {
 			$query=mysql_query("SELECT e.id,e.event_title,e.event_description,e.image_url,e.video_url,e.college_id,c.institution_name,e.	sharing_facebook,e.sharing_twitter,e.sharing_whatsapp,e.event,e.create_date,c.institution_name FROM tbl_event as e 
 									 JOIN tbl_college_institution c ON c.id=e.college_id
@@ -48,9 +48,9 @@ function displayEvent()
 				return $result;
 			}
 }
+*/
 
-
-function getMainEvent()
+/*function getMainEvent()
 {
 			$query=mysql_query("SELECT * FROM tbl_event WHERE event=1");
 			$row=mysql_fetch_assoc($query);
@@ -64,7 +64,7 @@ function getMainEvent()
 				return  false;
 			}
 
-}
+}*/
 
 //function for disaplying notification details
 function notifications()
