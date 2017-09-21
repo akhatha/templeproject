@@ -29,18 +29,19 @@ if(isset($_POST['save_user']))
 	}
 	else
 	{
-		echo "ids".$id;
+		
 		
 		$data=array(
 						'username '=>$username,
 						'password' =>$password,
+						'email_id'=>$useremail,
 						'created_date'=>$createDate
 					);
 					if($id)//if Id already exist update
 					{
-									$existEmail=mysql_query("SELECT * FROM `tbl_users` WHERE `email_id`='".$useremail."' and `id`='".$id."'");
-									if(mysql_num_rows($existEmail)>0)
-									{
+									
+									//if(mysql_num_rows($existEmail)>0)
+									//{
 										$result=updateName("tbl_users",$data,$id);	
 									    $mess="<div class='bs-example'>
 											<div class='alert alert-success fade in'>
@@ -49,13 +50,13 @@ if(isset($_POST['save_user']))
 											</div>
 										</div>";
 												
-									}
-									else
+									//}
+									/*else
 									{
 										$mess="<div class='alert alert-danger fade in' id='success'>
 													<strong>Oops! </strong> UserName or Email Already Exist!
 													</div>";
-									}
+									}*/
 								
 					}
 					else
@@ -153,11 +154,11 @@ if(isset($_POST['delete']))
                           foreach($selectUsers as $row)
                                 {
 								?>
-										<tr data-user-id=<?php echo $row['id']?>>
+										<tr data-id=<?php echo $row['id']?>>
 										<?php
-											   echo '<form method="POST"><td class="hidden-xs">'.$i.'</td><td class="hidden-xs">'.$row['username'].'</td>
+											   echo '<td class="hidden-xs">'.$i.'</td><td class="hidden-xs">'.$row['username'].'</td>
 											   <td align="center">
-												<button type="button" class="btn btn-default edit" value='.$row['id'].'><em class="fa fa-pencil"></em></button>  </td></form>
+												<button data-user-id='.$row['username'].' data-email-id='.$row['email_id'].' data-id='.$row['id'].' type="button" class="btn btn-default edit" value='.$row['id'].'><em class="fa fa-pencil"></em></button>  </td>
 												<td><form method="POST"><input type="hidden" name="id" value='.$row['id'].'><input type="submit" class="btn btn-danger fa fa-trash" name="delete" value="Delete"> </form> </td>
 								  
 										</tr>';
@@ -210,6 +211,26 @@ if(isset($_POST['delete']))
 		</div>
 	</div>
 </div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$( document ).ready(function() {
+    $('.edit').click(function(){
+	var id=$(this).data('id');
+	var username=$(this).data('user-id');
+	var email=$(this).data('email-id');
+	$('#id').val(id);
+	$('#user_name').val(username);
+	$('#user_email').val(email);
+	
+});
+});
+
+
+</script>
 <?php
 require('common/footer.php');
 ?>
+
+
+
