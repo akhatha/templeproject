@@ -83,7 +83,7 @@ if(!isset($_SESSION['username']))
                     </li>
 			    
 					<li>
-                        <a href="addvideo.php"><i class="glyphicon glyphicon-facetime-video"></i> Add Videos</a>
+                        <a href="addevent.php"><i class="glyphicon glyphicon-facetime-video"></i> Add Videos</a>
                     </li>
 					<li>
                         <a href="addgallery.php"><i class="fa fa-upload"></i> Add Gallery</a>
