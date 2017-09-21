@@ -32,6 +32,12 @@ if(!isset($_SESSION['username']))
     <!-- Custom Fonts -->
     <link href="../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
       <link href="https://cdn.datatables.net/1.10.12/css/jquery.dataTables.min.css" rel="stylesheet" type="text/css">
+	  <style>
+	  .navbar-inverse {
+    background-color: #a00000;
+    
+}
+	  </style>
 </head>
 
 <body>
@@ -48,7 +54,7 @@ if(!isset($_SESSION['username']))
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-               <a href=""><img src="../assets/images/banner.png" style="width:194px;height:46px"/></a>
+               <a href=""><img src="../assets/images/logo.png" style="width:194px;height:46px"/></a>
             </div>
             <!-- Top Menu Items -->
             <ul class="nav navbar-right top-nav">
@@ -77,34 +83,16 @@ if(!isset($_SESSION['username']))
                     </li>
 			    
 					<li>
-                        <a href="adddirectory.php"><i class="fa fa-sitemap"></i> Directory</a>
+                        <a href="addevent.php"><i class="glyphicon glyphicon-facetime-video"></i> Add Videos</a>
+                    </li>
+					<li>
+                        <a href="addgallery.php"><i class="fa fa-upload"></i> Add Gallery</a>
                     </li>
 
-                        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown">Events <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li > <a href="addinstitution.php">Add Institution</a></li>
-                            <li><a href="addevent.php">Add Events</a></li>
-							</ul>
-							</li>
-					<li>
-                        <a href="addcourse.php"><i class="fa fa-graduation-cap"></i>Add Course</a>
-                    </li>
-					<li>
-                        <a href="addweburl.php"><i class="fa fa-globe"></i> Add Website URL</a>
-                    </li>	
-					<li>
-                        <a href="addappurl.php"><i class="fa fa-mobile-phone  fa-lg">&nbsp;</i>Nitte Apps</a>
-                    </li>	
-
-                    <li>
-                        <a href="notification.php"><i class="fa fa-bell"></i> Push Notification</a>
-                    </li>
-                    <li>
+                     <li>
                         <a href="contact.php"><i class="fa fa-fw fa-edit"></i> Contact Details</a>
                     </li>
-					  <li>
-                        <a href="map.php"><i class="fa fa-fw fa-map-marker"></i>Map</a>
-                    </li>
+					  
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
