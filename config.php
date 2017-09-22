@@ -9,7 +9,7 @@ $db = mysql_select_db(DB_DATABASE) or die(mysql_error()) or die(mysql_error());
 define("STATUS", "success");
 
 
-define("SITE_URL",$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/templenew");
+define("SITE_URL",$_SERVER['REQUEST_SCHEME']."://".$_SERVER['HTTP_HOST']."/templeproject");
 
 
 ?>
