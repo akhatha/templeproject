@@ -14,6 +14,20 @@
     <!-- Bootstrap Core JavaScript -->
     <script src="frontend/js/bootstrap.min.js"></script>
 
+
+<script type="text/javascript">
+        $(document).ready(function(){
+            $('#lightgallery').lightGallery();
+        });
+        </script>
+		
+        <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+        <script src="frontend/js/lightgallery-all.min.js"></script>
+        <script src="frontend/js/jquery.mousewheel.min.js"></script>
+</body>
+	
+	
+	
     <!-- Script to Activate the Carousel -->
     <script>
     $('.carousel').carousel({

@@ -42,7 +42,7 @@ include('header.php');
                         <a href="gallery.php">Gallery</a>
                     </li>
                     <li>
-                        <a href="gallery.php">Videos</a>
+                        <a href="videos.php">Videos</a>
                     </li>
 					<li><a data-toggle="dropdown" href="#" class="text-info dropdown-toggle">Services</a> <ul class="dropdown-menu dropdown_mod" data-dropdown-in="fadeInUp"
                                 data-dropdown-out="fadeOut">

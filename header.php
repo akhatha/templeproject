@@ -13,6 +13,7 @@
 
     <!-- Bootstrap Core CSS -->
     <link href="frontend/css/bootstrap.min.css" rel="stylesheet">
+ <link href="frontend/css/lightgallery.css" rel="stylesheet">
 
     <!-- Custom CSS -->
     <link href="frontend/css/business-casual.css" rel="stylesheet">
